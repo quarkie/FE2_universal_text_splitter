@@ -1,0 +1,105 @@
+SE2 / THL Türöffnunggedruckt am 22.Oktober 2024 9:29
+
+Einsatzanlass
+
+Stichwort F SE2 Türe öffnen/verschliessen
+
+Meldebild THL Türöffnung
+
+Zusatz RD und Pol auf Anfahrt
+
+Meldender selbst / 07967123
+
+Rückruf  -  /  -
+
+Meldeweg 112
+
+Einsatzort
+
+Ort Rosenberg [73494]
+
+Ortsteil Hohenberg
+
+Straße Blumenstraße 1
+
+Ortszusatz EFH
+
+EO Koordinaten
+
+WGS N49.00187 E10.05223
+
+EinsatzNrn F1240003249
+
+Einsatzstatus Zeit
+
+unerledigt 22.10.2024 09:28:29
+
+alarmiert 22.10.2024 09:29:02
+
+EM (Stärke/AGT) Zuteil. Alarm Status 3 Status 4 Status 7 Status 8 Status 1 Ende
+
+FF Rosenberg
+
+Feuerwache
+
+09:29:01 09:29:06 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--
+
+FF Rosenberg Führung
+
+B
+
+09:29:01 09:29:06 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--
+
+FF Rosenberg
+
+Türöffnung
+
+09:29:01 09:29:07 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--
+
+FL **********
+
+FAHRZEUGE *****
+
+09:29:02* 09:29:06 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--
+
+FL Rosenberg 1/19-1 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--
+
+FL Rosenberg 1/43-1 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--
+
+Einsatzmaßnahme Zeitpunkt Status
+
+Polizei zuteilen 22.10.2024 09:28:59 zugeteilt
+
+RD-Einsatz Brandwache erzeugen 22.10.2024 09:28:59 zugeteilt
+
+INFO DME FF OAK Kreisbrandmeister
+
+Info
+
+22.10.2024 09:29:02 zugeteilt
+
+DME FF OAK Kreisbrandmeister INFO 22.10.2024 09:29:02 zugeteilt
+
+SMS FF OAK Kreisbrandmeister INFO 22.10.2024 09:29:02 zugeteilt
+
+DME FF Rosenberg DiCalRed 22.10.2024 09:29:07 zugeteilt
+
+DME FF Rosenberg Führung B Tag 22.10.2024 09:29:07 zugeteilt
+
+DME FF Rosenberg Türöffnung Tag 22.10.2024 09:29:07 zugeteilt
+
+INFO Einsatzindikation KBM OAK 22.10.2024 09:29:07 zugeteilt
+
+INFO Polizei verständigen (FLZ Aalen) 22.10.2024 09:29:07 zugeteilt
+
+SDS FL Rosenberg 1/00 22.10.2024 09:29:07 zugeteilt
+
+SMS FF Rosenberg 22.10.2024 09:29:07 zugeteilt
+
+FAX FF Rosenberg 22.10.2024 09:29:07 zugeteilt
+
+MAIL FF Rosenberg 22.10.2024 09:29:07 zugeteilt
+
+Alarmdruck  1240128515  /  Feuerwehr
+
+- 1 -
