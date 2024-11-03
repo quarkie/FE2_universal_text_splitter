@@ -1,0 +1,84 @@
+
+
+
+plugins {
+
+  id "maven-publish"
+  id "java"
+  id "idea"
+}
+
+
+// Needs to match to FE2 shipped JRE.
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation files("dependencies/fe2_sdk_classes.jar")
+    implementation("org.apache.commons:commons-text:1.12.0")
+    implementation("org.apache.commons:commons-lang3:3.17.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.11.3")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.11.3")
+}
+
+test {
+    useJUnitPlatform()
+}
+
+def getBranchName() {
+    // Execute a Git command to get the current branch name
+    def branch = 'git rev-parse --abbrev-ref HEAD'.execute().text.trim()
+    return branch
+}
+
+def currentBranch = getBranchName()
+
+// Append '-SNAPSHOT' if not on the main branch
+if (currentBranch != 'main') {
+    version += '-SNAPSHOT'
+}
+
+task printVersion {
+    doLast {
+        println "Current version: ${version}"
+    }
+}
+
+// ---- UPDATE VERSION
+task updateVersion {
+        def propertyFile = file "src/main/resources/info.properties"
+        def props = new Properties()
+        propertyFile.withReader { props.load(it) }
+        props.setProperty('version', version)
+        propertyFile.withWriter { props.store(it, null) }
+}
+assemble.dependsOn updateVersion
+
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.quarkie.fe2.splitter'
+            artifactId = 'fe2-splitter'
+            version = version
+            from components.java
+        }
+    }
+  repositories {
+    maven {
+      name = "github"
+      url = "https://maven.pkg.github.com/quarkie/FE2_universal_text_splitter"
+      credentials {
+        username = System.getenv("GITHUB_ACTOR")
+        password = System.getenv("GITHUB_TOKEN")
+      }
+    }
+  }
+}
