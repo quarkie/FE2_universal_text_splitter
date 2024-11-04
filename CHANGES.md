@@ -1,0 +1,15 @@
+# Changelog
+
+## [1.1.0]
+
+- fix coordinates extraction (remove leading chars)
+- add named vehicles and units parameters
+- format code
+
+## [1.0.1]
+
+- recompile with java 17
+
+## [1.0.0]
+
+- Initial version of user profile management.
