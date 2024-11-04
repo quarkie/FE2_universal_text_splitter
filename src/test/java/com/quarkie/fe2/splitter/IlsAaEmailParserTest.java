@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import de.alamos.fe2.external.enums.EAlarmDataEntries;
 
 public class IlsAaEmailParserTest {
@@ -119,12 +120,18 @@ public class IlsAaEmailParserTest {
                 "- 1 -";
 
         Map<String, String> result = IlsAaEmailParser.parseAlarmText(emailText);
+
+        for (Map.Entry<String, String> entry : result.entrySet()) {
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+        }
+
+
         assertEquals("Blumenstraße 1", result.get(EAlarmDataEntries.STREET.getKey()));
         assertEquals("1", result.get(EAlarmDataEntries.HOUSE.getKey()));
         assertEquals("Rosenberg", result.get(EAlarmDataEntries.CITY.getKey()));
         assertEquals("73494", result.get(EAlarmDataEntries.POSTALCODE.getKey()));
-        assertEquals("N49.00187", result.get(EAlarmDataEntries.LAT.getKey()));
-        assertEquals("E10.05223", result.get(EAlarmDataEntries.LNG.getKey()));
+        assertEquals("49.00187", result.get(EAlarmDataEntries.LAT.getKey()));
+        assertEquals("10.05223", result.get(EAlarmDataEntries.LNG.getKey()));
         assertEquals("F1240003249", result.get(EAlarmDataEntries.EXTERNAL_ID.getKey()));
         assertEquals("selbst / 07967123", result.get(EAlarmDataEntries.CALLER.getKey()));
         assertEquals("-  /  -", result.get(EAlarmDataEntries.CALLER_CONTACT.getKey()));
