@@ -1,10 +1,14 @@
 package com.quarkie.fe2.splitter;
 
-import java.util.Map;
-
 import de.alamos.fe2.external.interfaces.IAlarmExtractor;
 
-public class AlarmDetector implements IAlarmExtractor{
+import java.util.Map;
+
+enum ParserType {
+    ILS_AA_EMAIL, DICAL_POCSAG_ALERT, LARDIS_STATUS_SDS
+}
+
+public class AlarmDetector implements IAlarmExtractor {
 
     // TODO add those Prefixes and keywords
     public static ParserType detectSource(String text) {
@@ -19,7 +23,7 @@ public class AlarmDetector implements IAlarmExtractor{
     }
 
     @Override
-    public  Map<String, String> extract(String text) {
+    public Map<String, String> extract(String text) {
         ParserType source = detectSource(text);
         return switch (source) {
             case ILS_AA_EMAIL -> IlsAaEmailParser.parseAlarmText(text);
@@ -28,8 +32,4 @@ public class AlarmDetector implements IAlarmExtractor{
             default -> throw new IllegalArgumentException("No parser available for source: " + source);
         };
     }
-}
-
-enum ParserType {
-    ILS_AA_EMAIL, DICAL_POCSAG_ALERT, LARDIS_STATUS_SDS;
 }
