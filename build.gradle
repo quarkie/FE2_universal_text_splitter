@@ -68,6 +68,9 @@ task updateVersion {
         propertyFile.withWriter { props.store(it, null) }
 }
 assemble.dependsOn updateVersion
+test.dependsOn updateVersion
+spotlessApply.dependsOn updateVersion
+
 
 
 publishing {

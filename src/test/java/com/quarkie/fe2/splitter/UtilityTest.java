@@ -1,6 +1,7 @@
 package com.quarkie.fe2.splitter;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.util.regex.Pattern;
 import org.junit.jupiter.api.Test;
@@ -100,5 +101,19 @@ public class UtilityTest {
     input = "";
     expected = "";
     assertEquals(expected, Utility.replaceWhitespaceWithUnderscore(input));
+  }
+
+  @Test
+  public void testRemoveNewlines() {
+    // Test cases
+    assertEquals("Hello World", Utility.removeNewlines("Hello\nWorld"));
+    assertEquals("Hello World", Utility.removeNewlines("Hello\rWorld"));
+    assertEquals("Hello World", Utility.removeNewlines("Hello\r\nWorld"));
+    assertEquals("Hello World", Utility.removeNewlines("Hello\n\nWorld"));
+    assertEquals("Hello World", Utility.removeNewlines("Hello\r\rWorld"));
+    assertEquals("Hello World", Utility.removeNewlines("Hello\r\n\r\nWorld"));
+    assertEquals("Hello World", Utility.removeNewlines("Hello   \r\n\r\n  World"));
+    assertEquals("Hello World", Utility.removeNewlines("Hello \n World"));
+    assertNull(Utility.removeNewlines(null)); // Test null input
   }
 }

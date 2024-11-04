@@ -4,6 +4,7 @@
 
 - fix coordinates extraction (remove leading chars)
 - add named vehicles and units parameters
+- match all newline chars in the units parser
 - format code
 
 ## [1.0.1]
