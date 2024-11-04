@@ -8,6 +8,9 @@ public class Utility {
   public static String PARAM_PREFIX_CUSTOM = "c_";
 
   public static String extractValue(String text, String key) {
+    if (text == null) {
+      return null;
+    }
     Pattern pattern = Pattern.compile(key + "\\s+(.+)");
     Matcher matcher = pattern.matcher(text);
     if (matcher.find()) {
@@ -17,6 +20,9 @@ public class Utility {
   }
 
   public static String extractPattern(String text, Pattern pattern) {
+    if (text == null) {
+      return null;
+    }
     Matcher matcher = pattern.matcher(text);
     if (matcher.find()) {
       return matcher.group(1).trim();
@@ -29,5 +35,12 @@ public class Utility {
       return null;
     }
     return input.replaceAll("\\s", "_");
+  }
+
+  public static String removeNewlines(String input) {
+    if (input == null) {
+      return null;
+    }
+    return input.replaceAll("[\\s]+", " ").trim();
   }
 }
