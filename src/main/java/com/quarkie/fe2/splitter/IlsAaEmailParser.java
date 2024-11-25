@@ -82,7 +82,10 @@ public class IlsAaEmailParser {
     Matcher matcher = UNITS_PATTERN.matcher(text);
     List<String> unitsList = new ArrayList<>();
     while (matcher.find()) {
-      unitsList.add(Utility.removeNewlines(matcher.group(1)).trim());
+      unitsList.add(
+          Utility.removeNewlines(matcher.group(0))
+              .split("\\s+\\d{2}:\\d{2}:\\d{2}|--:--:--")[0]
+              .trim());
     }
     return unitsList;
   }
@@ -92,7 +95,10 @@ public class IlsAaEmailParser {
     List<String> vehiclesList = new ArrayList<>();
 
     while (matcher.find()) {
-      vehiclesList.add(Utility.removeNewlines(matcher.group()).trim());
+      vehiclesList.add(
+          Utility.removeNewlines(matcher.group(0))
+              .split("\\s+\\d{2}:\\d{2}:\\d{2}|--:--:--")[0]
+              .trim());
     }
     return vehiclesList;
   }
