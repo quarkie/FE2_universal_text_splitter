@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.1]
+
+- make units and vehicle extraction more robust
+
 ## [1.1.0]
 
 - fix coordinates extraction (remove leading chars)

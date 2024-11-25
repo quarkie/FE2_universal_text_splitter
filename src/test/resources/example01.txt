@@ -1,0 +1,51 @@
+BR5 / BRAND Kleinbrand Hecke / Wiese Personen Keinegedruckt am 24.November 2024 14:07
+Einsatzanlass
+Stichwort F BR5 Brand Gebäude Stufe 1
+Meldebild BRAND Kleinbrand Hecke / Wiese Personen Keine
+Zusatz Hecke direkt an Gebäude
+Meldender Kuhn / 01637908248
+Rückruf  -  /  -
+Meldeweg 112
+Einsatzort
+Ort Rosenberg [73494]
+Ortsteil Rosenberg
+Straße Mühlweg 22
+EO Koordinaten
+WGS N49.01693 E10.04199
+EinsatzNrn F1240003594
+Einsatzstatus Zeit
+unerledigt 24.11.2024 14:06:52
+alarmiert 24.11.2024 14:07:50
+EM (Stärke/AGT) Zuteil. Alarm Status 3 Status 4 Status 7 Status 8 Status 1 Ende
+FF Rosenberg
+Feuerwache
+14:07:49 14:07:53 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--
+FF Rosenberg Führung
+B
+14:07:49 14:07:53 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--
+FF Rosenberg Zug BR 14:07:49 14:07:53 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--
+FL **********
+FAHRZEUGE *****
+14:07:50* 14:07:53 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--
+FL Rosenberg 1/19-1 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--
+FL Rosenberg 1/43-1 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--
+FL Rosenberg 1/74-1 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--
+Einsatzmaßnahme Zeitpunkt Status
+Polizei zuteilen 24.11.2024 14:06:57 zugeteilt
+RD-Einsatz Brandwache erzeugen 24.11.2024 14:06:57 zugeteilt
+INFO DME FF OAK Kreisbrandmeister
+Info
+24.11.2024 14:07:50 zugeteilt
+DME FF OAK Kreisbrandmeister INFO 24.11.2024 14:07:50 zugeteilt
+SMS FF OAK Kreisbrandmeister INFO 24.11.2024 14:07:50 zugeteilt
+DME FF Rosenberg DiCalRed 24.11.2024 14:07:53 zugeteilt
+DME FF Rosenberg Führung B Tag 24.11.2024 14:07:54 zugeteilt
+DME FF Rosenberg Zug BR Tag 24.11.2024 14:07:54 zugeteilt
+INFO Einsatzindikation KBM OAK 24.11.2024 14:07:54 zugeteilt
+INFO Polizei verständigen (FLZ Aalen) 24.11.2024 14:07:54 zugeteilt
+SDS FL Rosenberg 1/00 24.11.2024 14:07:54 zugeteilt
+SMS FF Rosenberg 24.11.2024 14:07:54 zugeteilt
+FAX FF Rosenberg 24.11.2024 14:07:54 zugeteilt
+MAIL FF Rosenberg 24.11.2024 14:07:54 zugeteilt
+Alarmdruck  1240142897  /  Feuerwehr
+- 1 -

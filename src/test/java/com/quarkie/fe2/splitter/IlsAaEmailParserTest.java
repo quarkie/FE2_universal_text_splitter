@@ -1,6 +1,6 @@
 package com.quarkie.fe2.splitter;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import de.alamos.fe2.external.enums.EAlarmDataEntries;
 import java.util.Map;
@@ -68,6 +68,7 @@ public class IlsAaEmailParserTest {
             + "Türöffnung\n"
             + "\n"
             + "09:29:01 09:29:07 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--\n"
+            + "FF Rosenberg Zug BR 14:07:49 14:07:53 --:--:-- --:--:-- --:--:-- --:--:-- --:--:-- --:--:--\n"
             + "\n"
             + "FL **********\n"
             + "\n"
@@ -148,7 +149,7 @@ public class IlsAaEmailParserTest {
         "Stichwort F SE2 Türe öffnen/verschliessen", result.get(EAlarmDataEntries.TEXT.getKey()));
     assertEquals("Hohenberg", result.get(EAlarmDataEntries.LOCATION_ADDITIOnAL.getKey()));
     assertEquals(
-        "FF Rosenberg Feuerwache|FF Rosenberg Führung B|FF Rosenberg Türöffnung",
+        "FF Rosenberg Feuerwache|FF Rosenberg Führung B|FF Rosenberg Türöffnung|FF Rosenberg Zug BR",
         result.get(EAlarmDataEntries.EINSATZMITTEL.getKey()));
     // assertEquals("SE2", result.get(EAlarmDataEntries.CITY_ABBR.getKey()));
     // assertEquals("SE2", result.get(EAlarmDataEntries.ABEK.getKey()));
@@ -158,8 +159,10 @@ public class IlsAaEmailParserTest {
     assertEquals("FF Rosenberg Feuerwache", result.get("unit_1"));
     assertEquals("FF Rosenberg Führung B", result.get("unit_2"));
     assertEquals("FF Rosenberg Türöffnung", result.get("unit_3"));
+    assertEquals("FF Rosenberg Zug BR", result.get("unit_4"));
+
     assertEquals(
-        "FF Rosenberg Feuerwache|FF Rosenberg Führung B|FF Rosenberg Türöffnung",
+        "FF Rosenberg Feuerwache|FF Rosenberg Führung B|FF Rosenberg Türöffnung|FF Rosenberg Zug BR",
         result.get("units"));
   }
 }
