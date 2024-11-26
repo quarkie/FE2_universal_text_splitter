@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0]
+
+- detect lardis sds alert and email
+- several changes in the detection
+- update to java 21
+
 ## [1.1.1]
 
 - make units and vehicle extraction more robust
