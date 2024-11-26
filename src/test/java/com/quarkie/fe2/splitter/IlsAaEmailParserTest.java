@@ -3,6 +3,7 @@ package com.quarkie.fe2.splitter;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import de.alamos.fe2.external.enums.EAlarmDataEntries;
+import java.util.HashMap;
 import java.util.Map;
 import org.junit.jupiter.api.Test;
 
@@ -118,7 +119,10 @@ public class IlsAaEmailParserTest {
             + "\n"
             + "- 1 -";
 
-    Map<String, String> result = IlsAaEmailParser.parseAlarmText(emailText);
+    Map<String, String> testData = new HashMap<>();
+    testData.put("origin", emailText);
+
+    Map<String, String> result = IlsAaEmailParser.parseAlarmText(testData);
 
     for (Map.Entry<String, String> entry : result.entrySet()) {
       System.out.println(entry.getKey() + " = " + entry.getValue());
