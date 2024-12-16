@@ -29,7 +29,7 @@ repositories {
 
 dependencies {
     implementation files("dependencies/fe2_sdk_classes.jar")
-    implementation("org.apache.commons:commons-text:1.12.0")
+    implementation("org.apache.commons:commons-text:1.13.0")
     implementation("org.apache.commons:commons-lang3:3.17.0")
     implementation ('org.slf4j:slf4j-api:2.0.16')
     implementation ('org.slf4j:slf4j-simple:2.0.16')
