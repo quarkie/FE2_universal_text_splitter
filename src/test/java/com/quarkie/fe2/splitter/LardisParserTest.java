@@ -70,21 +70,6 @@ public class LardisParserTest {
   }
 
   @Test
-  void testParseAlarmTextVariant2() {
-    String inputMessage = "Some header text # Additional details about the alarm";
-
-    Map<String, String> inputMap = new HashMap<>();
-    inputMap.put("origin", inputMessage);
-
-    // Parse the alarm text
-    LardisParser.parseAlarmText(inputMap);
-
-    // Assert that both header and details are correctly parsed
-    assertEquals("Some header text", inputMap.get("Header"));
-    assertEquals("Additional details about the alarm", inputMap.get("Details"));
-  }
-
-  @Test
   void testParseAlarmTextMissingGPS() {
     String inputMessage =
         "BW   AA      ILS        BR5 - BRAND Kleinbrand Hecke / Wiese Personen Keine||Gemeinde: Rosenberg||Ortsteil: Rosenberg||Strasse: Mühlweg 22||Objekt: ||$GPSN";

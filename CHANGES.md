@@ -2,8 +2,9 @@
 
 ## [1.2.0]
 
-- detect lardis sds alert and email
+- detect Lardis sds alert and email
 - several changes in the detection
+- dependabot dependencies
 - update to java 21
 
 ## [1.1.1]
