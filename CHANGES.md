@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.1]
+
+- adjust formatter
+- update README.md
+
 ## [1.2.0]
 
 - detect Lardis sds alert and email

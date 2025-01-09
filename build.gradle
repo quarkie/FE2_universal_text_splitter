@@ -1,16 +1,16 @@
 
 buildscript {
-repositories { mavenCentral() }
-  dependencies {
-    classpath 'com.diffplug.spotless:spotless-plugin-gradle:7.0.1'
-  }
+    repositories { mavenCentral() }
+    dependencies {
+        classpath 'com.diffplug.spotless:spotless-plugin-gradle:7.0.1'
+    }
 }
 
 
 plugins {
-  id "maven-publish"
-  id "java"
-  id "idea"
+    id "maven-publish"
+    id "java"
+    id "idea"
 }
 
 apply plugin: com.diffplug.gradle.spotless.SpotlessPlugin
@@ -35,7 +35,6 @@ dependencies {
     implementation ('org.slf4j:slf4j-simple:2.0.16')
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.11.4")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.11.4")
-
 }
 
 test {
@@ -49,10 +48,11 @@ def getBranchName() {
 }
 
 def currentBranch = getBranchName()
-
+def branchVersion=version
 // Append '-SNAPSHOT' if not on the main branch
 if (currentBranch != 'main') {
     version += '-SNAPSHOT'
+    branchVersion=version
 }
 
 task printVersion {
@@ -63,11 +63,11 @@ task printVersion {
 
 // ---- UPDATE VERSION
 task updateVersion {
-        def propertyFile = file "src/main/resources/info.properties"
-        def props = new Properties()
-        propertyFile.withReader { props.load(it) }
-        props.setProperty('version', version)
-        propertyFile.withWriter { props.store(it, null) }
+    def propertyFile = file "src/main/resources/info.properties"
+    def props = new Properties()
+    propertyFile.withReader { props.load(it) }
+    props.setProperty('version', version)
+    propertyFile.withWriter { props.store(it, null) }
 }
 assemble.dependsOn updateVersion
 test.dependsOn updateVersion
@@ -84,28 +84,42 @@ publishing {
             from components.java
         }
     }
-  repositories {
-    maven {
-      name = "github"
-      url = "https://maven.pkg.github.com/quarkie/FE2_universal_text_splitter"
-      credentials {
-        username = System.getenv("GITHUB_ACTOR")
-        password = System.getenv("GITHUB_TOKEN")
-      }
+    repositories {
+        maven {
+            name = "github"
+            url = "https://maven.pkg.github.com/quarkie/FE2_universal_text_splitter"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
     }
-  }
 }
 
 spotless {
-  format 'misc', {
-    target '*.gradle', '.gitattributes', '.gitignore'
-    trimTrailingWhitespace()
-    indentWithSpaces(2)
-  }
-  java {
-    formatAnnotations()
-    trimTrailingWhitespace()
-    googleJavaFormat('1.17.0')
-
-  }
+    format 'misc', {
+        target '*.gradle', '.gitattributes', '.gitignore'
+        trimTrailingWhitespace()
+        leadingTabsToSpaces(2)
+    }
+    java {
+        formatAnnotations()
+        trimTrailingWhitespace()
+        googleJavaFormat('1.17.0')
+    }
+    groovyGradle {
+        target '*.gradle' // default target of groovyGradle
+        greclipse()
+        removeSemicolons()
+        trimTrailingWhitespace()
+        leadingTabsToSpaces(4)
+        endWithNewline()
+    }
+    freshmark {
+        target 'README.md'
+        propertiesFile('gradle.properties')
+        properties {
+            it.put('branchVersion', branchVersion)
+        }
+    }
 }
