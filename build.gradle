@@ -2,7 +2,7 @@
 buildscript {
 repositories { mavenCentral() }
   dependencies {
-    classpath 'com.diffplug.spotless:spotless-plugin-gradle:7.0.1'
+    classpath 'com.diffplug.spotless:spotless-plugin-gradle:7.0.2'
   }
 }
 
